@@ -1,13 +1,13 @@
 # terraform-azurelocal-vm
 IaC to provision virtual machines on Azure Local using Terraform. 
 
-# Azure Stack HCI VM Automation with Terraform
+# Azure Local VM Automation with Terraform
 
-This repository contains Terraform scripts to automate the creation of Virtual Machines on Azure Stack HCI clusters.
+This repository contains Terraform scripts to automate the creation of Virtual Machines on Azure Local clusters.
 
 ## Project Description
 
-This project provides a simple and repeatable way to provision Virtual Machines on an Azure Stack HCI environment using HashiCorp Terraform. By defining the desired VM configuration in code, you can ensure consistency and reduce manual effort.
+This project provides a simple and repeatable way to provision Virtual Machines on an Azure Local environment using HashiCorp Terraform. By defining the desired VM configuration in code, you can ensure consistency and reduce manual effort.
 
 ## Prerequisites
 
@@ -17,15 +17,15 @@ Before using these scripts, ensure you have the following:
 
 2. **AzureRM Provider:** The scripts use the AzureRM provider. Terraform will automatically download the required version during initialization (`terraform init`).
 
-3. **Azure Stack HCI Cluster:** An operational Azure Stack HCI cluster.
+3. **Azure Local Cluster:** An operational Azure Local cluster.
 
-4. **Azure Arc Integration:** Your Azure Stack HCI cluster should be registered with Azure Arc.
+4. **Azure Arc Integration:** Your Azure Local cluster should be registered with Azure Arc.
 
-5. **Permissions:** Appropriate permissions in your Azure subscription and on the Azure Stack HCI cluster to create resources.
+5. **Permissions:** Appropriate permissions in your Azure subscription and on the Azure Local cluster to create resources.
 
-6. **OS Image:** A VHD or VHDX file containing the operating system you want to deploy, accessible on your Azure Stack HCI volume storage.
+6. **OS Image:** A VHD or VHDX file containing the operating system you want to deploy, accessible on your Azure Local volume storage.
 
-7. **Network Configuration:** Details of your Azure Stack HCI logical network or network interface card resource (specifically its Azure Resource ID).
+7. **Network Configuration:** Details of your Azure Local logical network or network interface card resource (specifically its Azure Resource ID).
 
 8. **Authentication Method:** Credentials to authenticate with Azure (e.g., Service Principal details - Client ID, Client Secret, Tenant ID, Subscription ID).
 
@@ -78,6 +78,6 @@ You will be prompted to confirm the action. Type `yes` to proceed.
 
 **Security:** Never commit sensitive information (like passwords or secrets) directly into your GitHub repository. Use `.gitignore` for `terraform.tfvars` and consider using a secrets management solution for production deployments.
 
-**Azure Stack HCI Provider:** Ensure the AzureRM provider version you are using supports the Azure Stack HCI LCM (Life Cycle Management) resources. Refer to the AzureRM provider documentation for compatibility.
+**Azure Local Provider:** Ensure the AzureRM provider version you are using supports the Azure Local LCM (Life Cycle Management) resources. Refer to the AzureRM provider documentation for compatibility.
 
-**Paths:** The os_image_path and storage_path should be the paths accessible from the Azure Stack HCI.
+**Paths:** The os_image_path and storage_path should be the paths accessible from the Azure Local.
