@@ -1,3 +1,6 @@
+# terraform-azurelocal-vm
+IaC to provision virtual machines on Azure Local using Terraform. 
+
 # Azure Stack HCI VM Automation with Terraform
 
 This repository contains Terraform scripts to automate the creation of Virtual Machines on Azure Stack HCI clusters.
@@ -30,7 +33,11 @@ Before using these scripts, ensure you have the following:
 
 1. **Clone the Repository:**
 
-    `git clone cd` 
+   Clone the repository to your local machine. Replace `<your-repository-url>` with the actual URL of your GitHub repository and `<repo-name>` with the desired local directory name.
+
+   ```bash
+   git clone <your-repository-url> <repo-name>
+   cd <repo-name>```
 
 2. **Initialize Terraform:** Navigate to the directory containing the Terraform files (`.tf`) and initialize Terraform. This downloads the necessary provider plugins.
 
